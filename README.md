@@ -3,8 +3,7 @@
 ## About This Repository
 This repository contains the code to solve the Keen Puzzle by Simon Tatham.
 
-## Programmers
-- Gaurav Ganna Jain
+## Developer
 - Shivam Pandey
 
 ## References
