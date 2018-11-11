@@ -131,5 +131,5 @@ for each_board in boards_list :
     else : # if UNSAT
         resultList.append('[]\n')
 
-with open('output.txt', 'w') as fout:
+with open('output_160010003.txt', 'w') as fout:
     fout.writelines(resultList)

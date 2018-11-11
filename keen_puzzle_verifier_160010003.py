@@ -39,7 +39,7 @@ import json
 from z3 import *
 
 input_file = "input_160010003.json"
-solution_file = "output.txt"
+solution_file = "output_160010003.txt"
 result = str()
 resultList = list()
 
