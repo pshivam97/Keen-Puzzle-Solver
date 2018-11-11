@@ -39,7 +39,7 @@ import json
 from z3 import *
 import time
 
-input_file = "input.json"
+input_file = "inp1_160010018.json"
 result = str()
 resultList = list()
 
@@ -70,11 +70,6 @@ for each_board in boards_list :
     for i in column_indices :
         for j in row_indices :
             stringToCellDict[i+j] = board[column_indices.index(i)][int(j)-1]
-
-    for i in range(len(sol)) :
-        x = i%6
-        y = i/6
-        solver_machine.add(board[x][y] == sol[i])
 
     for i in range(6) :
         for j in range(5) :
@@ -126,7 +121,6 @@ for each_board in boards_list :
                 j2 = row_indices.index(each_constraint[0][1][1])
                 solver_machine.add(Or(board[i1][j1] - board[i2][j2]==value,board[i2][j2] - board[i1][j1] == value))
 
-    solver_machine.add(board[0][0] == 2)
     if solver_machine.check() == sat : # if SAT
         solution = solver_machine.model()
         result = str()
